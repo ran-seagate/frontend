@@ -22,13 +22,6 @@ const Demo = styled('div')(({ theme }) => ({
 
 export default function GetFiles(){
     const [data, setData] = React.useState(null);
-      
-    // let configg  = {
-    //     headers: {
-    //         mode: 'cors',
-    //         cache: 'no-cache'
-    //     }
-    //   }
     
     React.useEffect(() => {
       axios.get("http://localhost:8080/files/").then((response) => {
@@ -39,10 +32,19 @@ export default function GetFiles(){
     if (!data) return null;
 
   return (<div>
+          <form
+              encType="multipart/form-data"
+              action="http://localhost:8080/files/"
+              method="POST"
+          >
+              <h1>Upload a file</h1>
+              <input type="file" name="file"/>
+              <input type="submit" value="upload"/>
+          </form>
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
         <Grid item xs={20} md={20}>
           <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
-            Files
+            <h1>Files</h1>
           </Typography>
           <Demo>
             <List>
