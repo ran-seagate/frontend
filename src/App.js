@@ -12,7 +12,7 @@ export default function BasicExample() {
       <div>
         <form
             encType="multipart/form-data"
-            action="http://localhost:8081/files/"
+            action="backend/files/"
             method="POST"
         >
           <h1>Upload a file</h1>

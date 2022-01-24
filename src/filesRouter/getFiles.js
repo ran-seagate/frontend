@@ -24,7 +24,7 @@ export default function GetFiles(){
     const [data, setData] = React.useState(null);
     
     React.useEffect(() => {
-      axios.get("http://localhost:8081/files/").then((response) => {
+      axios.get("backend/files/").then((response) => {
         setData(response.data);
       });
     }, []);
