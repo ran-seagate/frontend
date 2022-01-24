@@ -9,6 +9,7 @@ import GetFiles from "./filesRouter/getFiles";
 
 export default function BasicExample() {
   return (
+      <div>
     <Router>
       <div>
         <ul>
@@ -23,6 +24,16 @@ export default function BasicExample() {
         </Routes>
       </div>
     </Router>
+        <form
+            encType="multipart/form-data"
+            action="http://localhost:8080/files/"
+            method="POST"
+        >
+          <h1>Upload a file</h1>
+          <input type="file" name="file"/>
+          <input type="submit" value="upload"/>
+        </form>
+      </div>
   );
 }
 
