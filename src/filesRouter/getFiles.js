@@ -31,16 +31,7 @@ export default function GetFiles(){
   
     if (!data) return null;
 
-  return (<div>
-          <form
-              encType="multipart/form-data"
-              action="http://localhost:8081/files/"
-              method="POST"
-          >
-              <h1>Upload a file</h1>
-              <input type="file" name="file"/>
-              <input type="submit" value="upload"/>
-          </form>
+  return (
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
         <Grid item xs={20} md={20}>
           <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
@@ -92,6 +83,5 @@ export default function GetFiles(){
           </Demo>
       </Grid>
     </Box>
-    </div>
   );
 } 
