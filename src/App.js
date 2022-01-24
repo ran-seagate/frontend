@@ -26,7 +26,7 @@ export default function BasicExample() {
     </Router>
         <form
             encType="multipart/form-data"
-            action="http://localhost:8080/files/"
+            action="http://0.0.0.0:8080/files/"
             method="POST"
         >
           <h1>Upload a file</h1>
