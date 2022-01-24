@@ -24,7 +24,7 @@ export default function GetFiles(){
     const [data, setData] = React.useState(null);
     
     React.useEffect(() => {
-      axios.get("http://localhost:8080/files/").then((response) => {
+      axios.get("http://localhost:8081/files/").then((response) => {
         setData(response.data);
       });
     }, []);
@@ -34,7 +34,7 @@ export default function GetFiles(){
   return (<div>
           <form
               encType="multipart/form-data"
-              action="http://localhost:8080/files/"
+              action="http://localhost:8081/files/"
               method="POST"
           >
               <h1>Upload a file</h1>
